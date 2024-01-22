@@ -30,12 +30,14 @@ function getPageDetails(n){
 
     for(let i =startIndex; i<(endIndex); i++){
         if(data[i]!=undefined){
-                    innerHTML += 
+            const name = data[i].name
+            const email = name.replace(' ','.');
+        innerHTML += 
         `<li class="contact-item cf">
         <div class="contact-details">
             <img class="avatar" src="${data[i].image}">
-            <h3>${data[i].name}</h3>
-            <span class="email">${data[i].name}@example.com</span>
+            <h3>${name}</h3>
+            <span class="email">${email}@example.com</span>
         </div>
         <div class="joined-details">
                <span class="date">Joined ${data[i].joined}</span>
